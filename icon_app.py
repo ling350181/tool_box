@@ -9,9 +9,9 @@ rootPath = input(r'请输入要保存的文件路径').strip()
 
 def createSizeImage(*,image,width,height,rootPath):
     img_resize = image.resize((width, height))
-    img_resize.save(rootPath+'/{width}*{height}.png'.format(width=width,height=height))
+    img_resize.save(rootPath+'/{width}x{height}.png'.format(width=width,height=height))
     img_resize_lanczos = image.resize((width, height), Image.LANCZOS)
-    img_resize_lanczos.save(rootPath+'/{width}*{height}.png'.format(width=width,height=height))
+    img_resize_lanczos.save(rootPath+'/{width}x{height}.png'.format(width=width,height=height))
 
 #删除alpha通道
 def remove_transparency(im, bg_colour=(255, 255, 255)):
